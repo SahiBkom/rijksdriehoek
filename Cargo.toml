@@ -2,7 +2,9 @@
 name = "rijksdriehoek"
 version = "0.1.0"
 authors = ["Johan Govers <johan@otherweb.eu>"]
+license = "MIT/Apache-2.0"
 edition = '2018'
+
 description = "Convert coordinates between rijksdriehoek and wgs84"
 documentation = "https://docs.rs/rijksdriehoek"
 homepage = "https://github.com/SahiBkom/rijksdriehoek"
