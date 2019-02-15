@@ -1,16 +1,16 @@
-rijksdriehoek.rs
+rijksdriehoek
 ==============
 
 Convert coordinates between rijksdriehoek and wgs84.
 
-[![Travis-CI Status](https://travis-ci.com/rust-lang-nursery/rijksdriehoek.rs.svg?branch=master)](https://travis-ci.com/rust-lang-nursery/rijksdriehoekrs)
+[![Travis-CI Status](https://api.travis-ci.org/SahiBkom/rijksdriehoek.svg?branch=master)](https://travis-ci.org/SahiBkom/rijksdriehoek)
 [![Latest version](https://img.shields.io/crates/v/rijksdriehoek.svg)](https://crates.io/crates/rijksdriehoek)
 [![Documentation](https://docs.rs/rijksdriehoek/badge.svg)](https://docs.rs/rijksdriehoek)
-[![License](https://img.shields.io/crates/l/rijksdriehoek.svg)](https://github.com/rust-lang-nursery/rijksdriehoek.rs#license)
+[![License](https://img.shields.io/crates/l/rijksdriehoek.svg)](https://github.com/SahiBkom/rijksdriehoek#license)
 
 # Getting Started
 
-[rijksdriehoek.rs is available on crates.io](https://crates.io/crates/rijksdriehoek).
+[rijksdriehoek is available on crates.io](https://crates.io/crates/rijksdriehoek).
 It is recommended to look there for the newest released version, as well as links to the newest builds of the docs.
 
 At the point of the last update of this README, the latest published version could be used like this:

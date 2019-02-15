@@ -1,7 +1,3 @@
-// #![feature(test)]
-// extern crate test;
-// extern crate criterion;
-
 // The city Amsterfoort is used as reference Rijksdriehoek coordinate.
 const REF_RD_X: f32 = 155000.0;
 const REF_RD_Y: f32 = 463000.0;

@@ -1,5 +1,5 @@
+use criterion::{criterion_group,criterion_main };
 use criterion::Criterion;
-use criterion::{criterion_group, criterion_main};
 use rijksdriehoek::*;
 
 pub fn assert_f64(a: f64, b: f64, delta: f64) {
@@ -38,5 +38,4 @@ fn bench(c: &mut Criterion) {
 }
 
 criterion_group!(benches, bench);
-// criterion_group!(benches, bench_amsterdam_westertoren_f64);
 criterion_main!(benches);
