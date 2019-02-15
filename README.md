@@ -10,7 +10,7 @@ Convert coordinates between rijksdriehoek and wgs84.
 
 # Getting Started
 
-[lazy-static.rs is available on crates.io](https://crates.io/crates/rijksdriehoek).
+[rijksdriehoek.rs is available on crates.io](https://crates.io/crates/rijksdriehoek).
 It is recommended to look there for the newest released version, as well as links to the newest builds of the docs.
 
 At the point of the last update of this README, the latest published version could be used like this:
