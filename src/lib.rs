@@ -1,3 +1,6 @@
+#![feature(test)]
+extern crate test;
+
 // The city Amsterfoort is used as reference Rijksdriehoek coordinate.
 const REF_RD_X: f32 = 155000.0;
 const REF_RD_Y: f32 = 463000.0;
@@ -116,7 +119,12 @@ pub fn rijksdriehoek_to_wgs84<N: num_traits::Float>(x: N, y: N) -> (N, N) {
 #[cfg(test)]
 mod tests {
     use super::*;
-    
+    use test::Bencher;
+
+    fn assert_f64(a: f64, b: f64, delta: f64) {
+        assert!((a - b).abs() < delta, "{} != {}", a, b);
+    }
+
     fn assert_f32(a: f32, b: f32, delta: f32) {
         assert!((a - b).abs() < delta, "{} != {}", a, b);
     }
@@ -140,5 +148,31 @@ mod tests {
         let (x, y): (f64, f64) = wgs84_to_rijksdriehoek(53.21938317, 6.56820053);
         assert!((x - 233883.131).abs() < 0.5, "{} != {}", x, 233883.131);
         assert!((y - 582065.168).abs() < 0.5, "{} != {}", y, 582065.168);
+    }
+
+    #[bench]
+    fn bench_amsterdam_westertoren_f64(b: &mut Bencher) {
+        let mut lat_lon = (52.37453253f64, 4.88352559f64);
+        b.iter(|| {
+            for _ in 0..100 {
+                let (x, y) = wgs84_to_rijksdriehoek(lat_lon.0, lat_lon.1);
+                lat_lon = rijksdriehoek_to_wgs84(x, y);
+            }
+        });
+        // assert_f64(lat_lon.0, 52.37453253, 0.00001);
+        assert_f64(lat_lon.1, 4.88352559, 0.00001);
+    }
+
+    #[bench]
+    fn bench_amsterdam_westertoren_f32(b: &mut Bencher) {
+        let mut lat_lon = (52.37453253f32, 4.88352559f32);
+        b.iter(|| {
+            for _ in 0..100 {
+                let (x, y) = wgs84_to_rijksdriehoek(lat_lon.0, lat_lon.1);
+                lat_lon = rijksdriehoek_to_wgs84(x, y);
+            }
+        });
+        assert_f32(lat_lon.0, 52.37453253, 0.00001);
+        assert_f32(lat_lon.1, 4.88352559, 0.00001);
     }
 }

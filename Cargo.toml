@@ -1,8 +1,15 @@
 [package]
 name = "rijksdriehoek"
 version = "0.1.0"
-authors = ["johan"]
+authors = ["Johan Govers <johan@otherweb.eu>"]
 edition = '2018'
+description = "Convert coordinates between rijksdriehoek and wgs84"
+documentation = "https://docs.rs/rijksdriehoek"
+homepage = "https://github.com/SahiBkom/rijksdriehoek"
+
+repository = "https://github.com/SahiBkom/rijksdriehoek"
+keywords = ["rijksdriehoek", "rd", "wgs84", "coordinates", "transforms"]
+categories = ["algorithms", "embedded", "science", "parsing"]
 
 [dependencies]
 num-traits = "0.2"
