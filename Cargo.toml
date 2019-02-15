@@ -13,3 +13,10 @@ categories = ["algorithms", "embedded", "science", "parsing"]
 
 [dependencies]
 num-traits = "0.2"
+
+[dev-dependencies]
+criterion = "0.2"
+
+[[bench]]
+name = "benchmark"
+harness = false
